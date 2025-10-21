@@ -19,9 +19,12 @@ const uploadOnCloudinary = async(localFilePath) => {
     }
     catch (error){
         fs.unlinkSync(localFilePath)
+        return null;
 
     }
 }
+
+export {uploadOnCloudinary}
 
 // cloudinary.v2.uploader
 // .upload("dog.mp4", {
